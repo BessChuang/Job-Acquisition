@@ -1,0 +1,32 @@
+/* theme color：
+    background/primary color： black #000000, white #ffffff,
+    highlight： magenta #ff00ee,
+    secondary color：gray #858585, light gray #cdcdcd, */
+img {
+    background-position: center center;
+    width: 50%;
+}
+
+
+nav,
+footer {
+    background: black;
+    color: white;
+}
+
+body {
+    color: black;
+    background: white;
+}
+
+highli_ {
+    color: #ff00ee;
+}
+
+se_gray {
+    color: #858585;
+}
+
+se_ligray {
+    color: #cdcdcd;
+}
