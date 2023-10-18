@@ -1,5 +1,5 @@
-/* 看區塊邊界用的 */
-/* border: 2px solid #ff00ee; */
+/* 顏色,wrap設定 */
+/* About me葉面 */
 
 /* default部份重製 */
 * {
@@ -8,86 +8,182 @@
 }
 
 
-/* header */
-header div {
+.wrapper {
+    width: 100vw;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.flexItem {
+    display: flex;
+    /* default: no-wrap */
+}
+
+.flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper * {
+    margin: 0.5rem;
+}
+
+.headerBox {
+    height: 15vh;
     align-items: center;
-    height: 10vh;
-}
-
-header h1 {
-    font-size: 2em;
-    padding: 0.5em 0;
-}
-
-header img {
-    height: 100%;
-    display: inline;
+    overflow: hidden;
 }
 
 
-
-/* nav */
-
-nav {
-    display: flex;
-    justify-content: right;
+/* 裝img的div */
+.imgBox {
+    width: 10vw;
 }
 
-nav a {
-    display: inline-block;
-    padding: 1rem;
-    font-size: 1.2em;
-    text-decoration: none;
+
+header img,
+.displayImg {
+    width: 90%;
+    justify-content: center;
 }
 
-nav a:hover {
-    background-color: #ff00ee;
-    text-decoration: underline;
-}
-
-/* theme color：
-    background/primary color： black #000000, white #ffffff,
-    highlight： magenta #ff00ee,
-    secondary color：gray #858585, light gray #cdcdcd, */
 
 nav,
-footer,
-nav a {
-    background: black;
-    color: white;
-}
-
-
-.highli_ {
-    background: #ff00ee;
-}
-
-.se_gray {
-    background: #858585;
-}
-
-.se_ligray {
-    background: #cdcdcd;
-}
-
-/* aboutme */
-
-
-.container img {
-    height: 40vh
-}
-
-.aboutme_card,
-.aboutme_skill {
-    display: flex;
+.meLongText,
+.displayBox {
     width: 100%;
 }
 
-.aboutme_text,
-.aboutme_text>h3,
-.aboutme_text div {
-    padding-left: 1em;
-    padding-top: 1em;
+.displayLeft {
+    width: 20%;
+    margin: 0 0 0 3rem;
+}
+
+.displayRight {
+    width: 85%;
+    margin: 0 3rem 0 0;
+}
+
+.displayRight h2 {
+    width: 100%;
+    margin: 0 3rem 0 0;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+}
+
+#aboutMe {
+    width: 100%;
+    margin: 0;
+}
+
+.meImgAndText {
+    width: 30%;
+    padding: 2rem;
+}
+
+.meLongText {
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+h1 {
+    color: #fffefe;
+    font-size: 4rem;
+}
+
+nav li {
+    display: inline-block;
+    border: 2px solid #fffefe;
+    padding: 0.5rem 1rem;
+    box-shadow: 5px 5px 1px #41639081;
+}
+
+nav a {
+    color: #fffefe;
+    font-size: 1.5rem;
+    border-radius: 50;
+    text-decoration: none;
+}
+
+nav li:hover {
+    /* background: #41639081; */
+    /* opacity of hiheavy */
+    background: #ff7320;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+nav a::after {
+    content: url();
+}
+
+
+
+/* present color settings
+_black #858585
+_white #fffefe
+_hiheavy #3d537a ,dark blue
+_heavy    #416390 ,blue
+_light    #ffb276 ,pinkish orange
+_hilight #ff7320 ,orange
+*/
+
+/* .c_ for filled in */
+/* .bg_ for background */
+
+.c_black {
+    color: #858585;
+}
+
+.bg_black {
+    background: #858585;
+}
+
+.c_white {
+    color: #fffefe;
+}
+
+.bg_white {
+    background: #fffefe;
+}
+
+.c_hiheavy {
+    color: #416390;
+}
+
+.bg_hiheavy {
+    background: #416390;
+}
+
+.c_heavy {
+    color: #7da9f8;
+}
+
+.bg_heavy {
+    background: #7da9f8;
+}
+
+.c_light {
+    color: #ffb276;
+}
+
+.bg_light {
+    background: #ffb276;
+}
+
+.c_hilight {
+    color: #ff7320;
+}
+
+.bg_hilight {
+    background: #ff7320;
 }

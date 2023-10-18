@@ -2,10 +2,14 @@
 This website is build for acquiring a position as junior frontend developer, displaying practices and demos of HTML, CSS and JavaScript.
 Unfortunately, frameworks are not enrolled yet.
 
-# Blueprint or Mockup
-<!-- TODO：upload img in same file as done -->
 
-# API and Other Applications
+# Blueprint
+Base on conveinience for check and re-editing, here's the shorten linkage: https://tinyurl.com/bcLayout
+(Anyone who knew the link could open it)
 
-# Additional info
-PJC, showed in <title> and <footer>, is abbreviated from my Chinese name of the passport.
+# Applications
+<!-- TODO:added later -->
+
+# Other Info
+## PJC
+PJC, abbreviated from personal Chinese name.

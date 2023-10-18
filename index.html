@@ -11,57 +11,68 @@
 </head>
 
 <body>
+    <div class="wrapper bg_hiheavy">
+        <header>
+            <div class="headerBox flexItem">
+                <div class="imgBox"><img src="/img/filledIn_noBG_white.png" alt=""></div>
+                <h1>PJC's realm</h1>
 
-    <header class="se_gray">
-        <div><img src="/img/filledIn_noBG_black.png" alt="PJC_logo">
-            <h1>PJC_Job Acquisition</h1>
-        </div>
-        <nav class="nav_flex">
-            <a href="">About me</a>
-            <a href="">HTML & CSS</a>
-            <a href="">JavaScript</a>
-            <a href="">Small Demo</a>
-            <a href="">Figma</a>
-
+            </div>
+        </header>
+        <!-- header結束 -->
+        <nav class="bg_heavy c_white">
+            <ul class="flexItem">
+                <li><a href=""> About me </a></li>
+                <li><a href=""> HTML & CSS </a></li>
+                <li><a href=""> JavaScript </a></li>
+                <li><a href=""> Small Demo </a></li>
+                <li><a href=""> Figma </a></li>
+            </ul>
         </nav>
-    </header>
+        <!-- nav結束 -->
+        <div class="flexItem displayBox">
+            <!-- 主要陳列區開始 -->
 
-    <div class="container"> <!-- 主要說明 -->
-        <div class="aboutme_card">
-            <img src="/img/img_applyfor.jpg" alt="Apply for Front-end Developer...">
+            <div class="displayLeft bg_light">
+            </div>
+            <!-- 純色背景空間結束，25% width -->
+            <div class="displayRight flexwrap">
+                <h2 class="bg_hilight c_white">About Me</h2>
+                <div class="flexItem bg_white" id="aboutMe">
+                    <!-- 分頁標題結束 -->
+                    <div class="meImgAndText flexWrap">
+                        <img class="displayImg" src="/img/img_applyfor1.jpg" alt="">
+                        <p>Hi,it's PJC. "Bess" is nickname used at work.</p>
+                    </div>
+                    <!-- 簡圖+簡述結束 -->
+                    <div class="meLongText">
 
-            <div class="aboutme_text">
-                <!-- TODO:這一塊沒有展開到視窗寬.... -->
-                <h3>莊佩儒</h3>
-                <div class="aboutme_skill">
-                    <h3>應用技能</h3>
-                    <div class="skill_left">
-                        <p>硬技能/軟體：</p>
-                        <p>文書：WORD, EXCEL，基本操作。</p>
-                        <p>製圖：CorelDraw、PhotoShop，簡易圖文組合。</p>
+                        <h3>Front-end relevent skills</h3>
+                        <p>#HTML #CSS #JavaScript #Git</p>
+                        <h3>Other Softwares</h3>
+                        <p>#Word #Excel #CorelDraw #PhotoShop #Figma</p>
+                        <p>##basic usage</p>
+                        <h3>Languages</h3>
+                        <p>Chinese, English</p>
                     </div>
-                    <div class="skill_right">
-                        <p>軟技能：</p>
-                        <p>溝通橋梁</p>
-                    </div>
+                    <!-- 文字區結束 -->
+
                 </div>
-
-                <h3>自傳/陳述</h3>
-                <p></p>
-                <h3>學經歷</h3>
-                <p></p>
-                <h3>其他</h3>
-                <p></p>
-                <!-- email me -->
-                <p></p>
             </div>
 
-
         </div>
 
+
+    </div>
+
+
+    <footer class="c_white bg_hiheavy">
+        <p>copyright &#169 PJC</p>
+    </footer>
+    <!-- footer結束 -->
+    </div>
 
 </body>
 
-<footer class="bg_b">copyright &#169 PJC</footer>
 
 </html>
