@@ -1,0 +1,35 @@
+.pt:after {
+    content: "pt";
+}
+
+.px:after {
+    content: "px";
+}
+
+.em:after {
+    content: "em";
+}
+
+.perc:after {
+    content: "%";
+}
+
+.size:after {
+    content: "";
+}
+
+
+table {
+    border-collapse: collapse;
+    border: thin solid black;
+}
+
+th,
+td {
+    padding: 10px
+}
+
+tr:nth-child(odd) {
+    background-color: grey;
+
+}

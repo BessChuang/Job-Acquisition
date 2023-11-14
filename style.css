@@ -1,17 +1,19 @@
 /* 顏色,wrap設定 */
-/* About me葉面 */
 
 /* default部份重製 */
 * {
     box-sizing: border-box;
     margin: 0;
+    padding-inline-start: 0;
 }
 
 
 .wrapper {
-    width: 100vw;
+    /* width: 100vw; */
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .flexItem {
@@ -25,165 +27,211 @@
     justify-content: center;
 }
 
-.wrapper * {
-    margin: 0.5rem;
+.wrapper *:not(nav, nav *) {
+    margin: 0.25em;
 }
 
-.headerBox {
-    height: 15vh;
-    align-items: center;
-    overflow: hidden;
+/* .headerBox {
+    height: 10vh;
+} */
+
+/* 變數對應：字體大小，主色*/
+
+h1,
+h2,
+h3 {
+    font-weight: bolder;
+    padding-top: 0.1em;
 }
 
-
-/* 裝img的div */
-.imgBox {
-    width: 10vw;
+p {
+    padding-bottom: 0.1em;
 }
 
-
-header img,
-.displayImg {
-    width: 90%;
-    justify-content: center;
+:root {
+    --h1-size: 2em;
+    --h2-size: 1.5em;
+    --h3-size: 1.125em;
+    --p-size: 1em;
+    /* p是default */
 }
 
-
-nav,
-.meLongText,
-.displayBox {
-    width: 100%;
-}
-
-.displayLeft {
-    width: 20%;
-    margin: 0 0 0 3rem;
-}
-
-.displayRight {
-    width: 85%;
-    margin: 0 3rem 0 0;
-}
-
-.displayRight h2 {
-    width: 100%;
-    margin: 0 3rem 0 0;
-    padding: 0.5rem 2rem;
-    font-size: 1.5rem;
-}
-
-#aboutMe {
-    width: 100%;
-    margin: 0;
-}
-
-.meImgAndText {
-    width: 30%;
-    padding: 2rem;
-}
-
-.meLongText {
-    width: 100%;
-    margin: 0;
-    padding: 2rem;
-}
-
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 1.2rem;
-}
-
-h1 {
-    color: #fffefe;
-    font-size: 4rem;
-}
-
-nav li {
-    display: inline-block;
-    border: 2px solid #fffefe;
-    padding: 0.5rem 1rem;
-    box-shadow: 5px 5px 1px #41639081;
-}
-
-nav a {
-    color: #fffefe;
-    font-size: 1.5rem;
-    border-radius: 50;
-    text-decoration: none;
-}
-
-nav li:hover {
-    /* background: #41639081; */
-    /* opacity of hiheavy */
-    background: #ff7320;
-    text-decoration: underline;
-    transform: scale(1.1);
-}
-
-nav a::after {
-    content: url();
-}
-
-
-
-/* present color settings
-_black #858585
-_white #fffefe
-_hiheavy #3d537a ,dark blue
-_heavy    #416390 ,blue
-_light    #ffb276 ,pinkish orange
-_hilight #ff7320 ,orange
-*/
-
-/* .c_ for filled in */
-/* .bg_ for background */
-
-.c_black {
-    color: #858585;
+:root {
+    --black-color: #85858586;
+    /* 灰黑階 */
+    --white-color: #fffefe;
+    --hiheavy-color: #416390;
+    --heavy-color: #7da9f8;
+    --light-color: #ffb276;
+    --hilight-color: #ff7320;
 }
 
 .bg_black {
-    background: #858585;
+    background: var(--black-color);
 }
 
-.c_white {
-    color: #fffefe;
+.c_black {
+    color: var(--black-color);
 }
 
 .bg_white {
-    background: #fffefe;
+    background: var(--white-color);
 }
 
-.c_hiheavy {
-    color: #416390;
+.c_white {
+    color: var(--white-color);
 }
 
 .bg_hiheavy {
-    background: #416390;
+    background: var(--hiheavy-color);
 }
 
-.c_heavy {
-    color: #7da9f8;
+.c_hiheavy {
+    color: var(--hiheavy-color);
 }
 
 .bg_heavy {
-    background: #7da9f8;
+    background: var(--heavy-color);
 }
 
-.c_light {
-    color: #ffb276;
+.c_heavy {
+    color: var(--heavy-color);
 }
 
 .bg_light {
-    background: #ffb276;
+    background: var(--light-color);
 }
 
-.c_hilight {
-    color: #ff7320;
+.c_light {
+    color: var(--light-color);
 }
 
 .bg_hilight {
-    background: #ff7320;
+    background: var(--hilight-color);
+}
+
+.c_hilight {
+    color: var(--hilight-color);
+}
+
+
+/* display區塊直接用grid切*/
+
+div.displayArea {
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "left right"
+        "bottom bottom";
+    grid-template-columns: 2fr 6fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 0.7em 0.7em 0.7em;
+}
+
+
+.grid_top,
+.grid_right,
+.grid_left,
+.grid_bottom {
+    padding: 0.25em;
+}
+
+.displayImg {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+header,
+nav,
+footer,
+.displayBox {
+    width: 100vw;
+}
+
+
+/* header */
+header h1 {
+    font-size: var(--h1-size);
+    padding: 0.7em 0 0.2em 0;
+}
+
+/* nav */
+nav {
+    /* border: 0.2em solid var(--white-color); */
+    margin: 0 0.5em;
+}
+
+.displayArea {
+    /* border: 0.2em solid var(--hilight-color); */
+}
+
+ul.displayArea {
+    /* margin-block-start: 0.25em; */
+    /* margin-block-end: 0; */
+}
+
+nav li {
+    display: table;
+    list-style: none;
+    background: var(--light-color);
+    /* border: 0.2em solid var(--hilight-color); */
+    border-radius: 0.5em;
+    box-shadow: 0em 1em 0em var(--light-color);
+    margin: 0 0.2em 0 0.2em;
+    padding: 0.4em 0.4em;
+}
+
+nav a {
+    color: var(--hiheavy-color);
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    font-size: var(--h3-size);
+}
+
+
+/* TODO: JS設定ACTIVE之後可以使用 */
+nav a:hover,
+nav a:active {
+    font-weight: bolder;
+    padding: 0.25em 0.5em;
+    font-size: var(--h3-size);
+}
+
+/* nav li:hover,  測試效果用*/
+nav li:active {
+    box-shadow: 0 0.5em 0 var(--light-color);
+    z-index: 10;
+}
+
+
+footer p {
+    color: var(--white-color);
+    background-color: #85858586;
+    padding: 0.2em;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/* 呼應nav圓角 */
+.displayArea {
+    /* border: 0.2em solid var(--white-color); */
+    /* border-radius: 0.5em; */
+    padding-top: 0.5em;
+}
+
+/* about me 文字區 */
+.aboutText h3 {
+    padding-left: 0.25em;
+    padding-top: 0.25em;
+}
+
+.aboutText p:not(:first-child, :nth-child(2)) {
+    padding-left: 1em;
+}
+
+.aboutText p:first-child,
+.aboutText p:nth-child(2) {
+    font-size: var(--h3-size);
 }
