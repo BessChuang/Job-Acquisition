@@ -3,82 +3,70 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PJC_Job Acquisition</title>
+    <title>PJ_Job Acquisition</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/img/PJC_favicon.ico">
 </head>
 
 <body>
-    <div class="wrapper bg_hiheavy">
-        <header class="">
-            <div class="headerBox c_white">
-                <h1 class="c_white">PJC's website <span>for Job Acquisition </span></h1>
-
+    <header>
+        <h1>PJ's website <span>for Job Acquisition </span></h1>
+        <a href=""><img class="navbtn" src="/img/direction.png" alt="" width="36"></a>
+    </header><!-- 主頁大標 -->
+    <nav>
+        <ul>
+            <li id="navMain"><a href="#main">Main</a></li>
+            <li id="navExhibit"><a href="">Exhibit</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <h2>PeiJu (Bess)</h2>
+        <div class="aboutme">
+            <h3>Contact</h3><a href="mailto: peiruchuang@gmail.com" title="send mail"></a>
+            <img src="./img/email.png" id="mailme"> </a>
+        </div><!-- contact -->
+        <h3>Skill</h3>
+        <div class="skill">
+            <p>HTML, CSS, JavaScript</p>
+        </div><!-- skill -->
+        <h3>Work experience</h3>
+        <div class="work">
+            <div>
+                <h4>@cybersecurity field, 2022</h4>
+                <p>Poject Manager</p>
+                <img src="/img/project-plan.png" alt="">
+                <p>Deals cubersecurity service mainly within Moblie Applications and Data Flow of Games. </p>
+                <p>Time arrangement and control, certificate delivery control. </p>
             </div>
-            <!-- 標題區結束 -->
-
-        </header>
-        <!-- header結束 -->
-        <nav class="">
-            <ul class="flexItem">
-                <li><a href=""> About me </a></li>
-                <li><a href=""> HTML & CSS </a></li>
-                <li><a href=""> JavaScript </a></li>
-                <li><a href=""> Small Demo </a></li>
-                <li><a href=""> Figma </a></li>
-            </ul>
-        </nav>
-        <!-- nav結束 -->
-        <div class="displayArea bg_white">
-            <div style="grid-area: top" class="grid_top">
-
+            <div>
+                <h4>@depatment store, 2017~2021</h4>
+                <p>Floor Associate, from junior to senior</p>
+                <img src="/img/placeholder.png" alt="">
+                <p>As a bridge between specified brands and department store.</p>
+                <p>Focus on sales performance maintaining and boosting, and branding.</p>
+                <p>And, sometimes incidents or emergencies or customer complaints handling.</p>
             </div>
-            <!-- grid_top，目前沒有內容，先備著 -->
-            <div style="grid-area: left" class="grid_left">
-                <img class="displayImg" src="/img/img_applyfor1.jpg" alt="apply for junior frontend developer">
-                <button>
-                    <a href="mailto:mail@example.com" target="_blank">contact me</a>
-                </button>
+            <div>
+                <h4>@coffee shop, 2012~2017 </h4>
+                <p>From Clerk to Assistant Shop Manager</p>
+                <img src="/img/coffee.png" alt="">
+                <p>Had led a team of 4~8 people</p>
+                <p>Focus on goods control, employee schedule arrangement, sales performance. </p>
+                <p>And, sometimes customer complaints handling.</p>
             </div>
-            <!-- grid_left結束， TODO:BUTTON功能及樣式還沒寫 -->
-            <div style="grid-area: right" class="grid_right">
-                <div class="aboutText">
-                    <h2 class="c_hilight c_white" id="aboutMe">About Me</h2>
-                    <p>
-                        <em>Hi, glad to meet you here. And thank you for cliccking this linkage. </em></br>
-                    </p>
-                    <p>This is PJC. Also you could simply call me "Bess", for easier memorizing.</br>
-                        Here's some brief indtroduction for you:</br>
-                    </p>
-
-                    <h3>Front-end relevent skills</h3>
-                    <p>HTML, CSS, JavaScript, Git</p>
-                    <h3>Other Softwares</h3>
-                    <p>Word, Excel, CorelDraw, PhotoShop, Figma --with basic usage</p>
-                    <h3>Languages</h3>
-                    <p>Chinese, English</p>
-
-                    <h3>Work Experiences</h3>
-                    <p>coffee, department, PM, now</p>
-                    <div></div> <!-- TODO:再想想用甚麼樣式呈現，CARDS? -->
-
-                    <h3>Education</h3>
-                    <p>Bachelor of Science in Food science, National Chung Hsing University, Taichung, Taiwan</p>
-
-                    <h3>Others</h3>
-                    <p>TOEIC, Reading and Listening</p>
-
-                </div>
-                <!-- 文字區結束 -->
-            </div>
-            <!-- grid_right結束  TODO:工作經歷還要再想呈現方式-->
-        </div>
-        <footer style="grid-area: bottom" class="grid_bottom">
-            <p>copyright &#169 PJC</p>
-        </footer>
-        <!-- grid_bottom結束，即footer區域 -->
+        </div><!-- Work -->
+        <h3>Education and Others</h3>
+        <div class="eduAndOthers">
+            <p>Bachlor's degree, Food Science and Bio-Technology, National Chung Hsing University</p>
+            <p>TOEIC reading and listening 835 (2017)</p>
+            <p>Driving Liscence of Original Heavy-duty Motorcycle</p>
+        </div><!-- eduAndOthers -->
+    </div><!-- wrap用div -->
+    </div><!-- 個人資料展示 -->
+    <footer>
+        <p>copyright &#169 PeiJu (Bess)</p>
+    </footer><!-- 常看到footer有，就加了 -->
 </body>
 
 </html>

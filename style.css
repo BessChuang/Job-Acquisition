@@ -1,64 +1,21 @@
-/* 顏色,wrap設定 */
-
-/* default部份重製 */
+/* default重新設定 */
 * {
     box-sizing: border-box;
     margin: 0;
     padding-inline-start: 0;
+    /* 觀察用 */
+    border: 1px solid red;
 }
 
-
-.wrapper {
-    /* width: 100vw; */
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-}
-
-.flexItem {
-    display: flex;
-    /* default: no-wrap */
-}
-
-.flexWrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.wrapper *:not(nav, nav *) {
-    margin: 0.25em;
-}
-
-/* .headerBox {
-    height: 10vh;
-} */
-
-/* 變數對應：字體大小，主色*/
-
-h1,
-h2,
-h3 {
-    font-weight: bolder;
-    padding-top: 0.1em;
-}
-
-p {
-    padding-bottom: 0.1em;
-}
-
+/* 通用變數 */
 :root {
     --h1-size: 2em;
     --h2-size: 1.5em;
     --h3-size: 1.125em;
-    --p-size: 1em;
-    /* p是default */
 }
 
 :root {
     --black-color: #85858586;
-    /* 灰黑階 */
     --white-color: #fffefe;
     --hiheavy-color: #416390;
     --heavy-color: #7da9f8;
@@ -66,172 +23,108 @@ p {
     --hilight-color: #ff7320;
 }
 
-.bg_black {
-    background: var(--black-color);
-}
-
-.c_black {
-    color: var(--black-color);
-}
-
-.bg_white {
-    background: var(--white-color);
-}
-
-.c_white {
-    color: var(--white-color);
-}
-
-.bg_hiheavy {
+/* 共用區塊css樣式 */
+body {
     background: var(--hiheavy-color);
+
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        background: var(--heavy-color);
+        color: var(--white-color);
+        padding: 0.2rem 1.2rem;
+    }
+
+    div {
+        background: var(--white-color);
+
+        div,
+        h2,
+        h3 {
+            padding: 0.75rem 0.75rem 0 0.75rem;
+        }
+    }
+
+    footer {
+        background: var(--black-color);
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: (--h1-size);
+        color: var(--white-color);
+    }
+
+    h2 {
+        font-size: (--h1-size);
+    }
+
+    h3 {
+        font-size: (--h1-size);
+    }
+
+
 }
 
-.c_hiheavy {
-    color: var(--hiheavy-color);
-}
-
-.bg_heavy {
-    background: var(--heavy-color);
-}
-
-.c_heavy {
-    color: var(--heavy-color);
-}
-
-.bg_light {
-    background: var(--light-color);
-}
-
-.c_light {
-    color: var(--light-color);
-}
-
-.bg_hilight {
-    background: var(--hilight-color);
-}
-
-.c_hilight {
-    color: var(--hilight-color);
-}
-
-
-/* display區塊直接用grid切*/
-
-div.displayArea {
-    display: grid;
-    grid-template-areas:
-        "top top"
-        "left right"
-        "bottom bottom";
-    grid-template-columns: 2fr 6fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: 0 0.7em 0.7em 0.7em;
-}
-
-
-.grid_top,
-.grid_right,
-.grid_left,
-.grid_bottom {
-    padding: 0.25em;
-}
-
-.displayImg {
-    object-fit: cover;
-    object-position: center center;
-    width: 100%;
-}
-
-header,
-nav,
-footer,
-.displayBox {
-    width: 100vw;
-}
-
-
-/* header */
-header h1 {
-    font-size: var(--h1-size);
-    padding: 0.7em 0 0.2em 0;
-}
-
-/* nav */
 nav {
-    /* border: 0.2em solid var(--white-color); */
-    margin: 0 0.5em;
+    position: relative;
+    width: 100%;
+    height: 30%vw;
 }
 
-.displayArea {
-    /* border: 0.2em solid var(--hilight-color); */
+nav ul {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    wrap: wrap;
+    justify-content: flex-end;
+
+
+    li {
+        list-style-type: none;
+        height: 40%vh;
+        font-size: var(--h3-size);
+        font-weight: bold;
+        padding: 0 1.5rem;
+    }
+
+    a {
+        text-decoration: underline;
+        color: var(--hiheavy-color);
+    }
+
+    li:hover {
+        background: var(--light-color);
+    }
 }
 
-ul.displayArea {
-    /* margin-block-start: 0.25em; */
-    /* margin-block-end: 0; */
-}
-
-nav li {
-    display: table;
-    list-style: none;
-    background: var(--light-color);
-    /* border: 0.2em solid var(--hilight-color); */
-    border-radius: 0.5em;
-    box-shadow: 0em 1em 0em var(--light-color);
-    margin: 0 0.2em 0 0.2em;
-    padding: 0.4em 0.4em;
-}
-
-nav a {
-    color: var(--hiheavy-color);
-    text-decoration: none;
-    padding: 0.25em 0.5em;
-    font-size: var(--h3-size);
-}
-
-
-/* TODO: JS設定ACTIVE之後可以使用 */
-nav a:hover,
-nav a:active {
-    font-weight: bolder;
-    padding: 0.25em 0.5em;
-    font-size: var(--h3-size);
-}
-
-/* nav li:hover,  測試效果用*/
-nav li:active {
-    box-shadow: 0 0.5em 0 var(--light-color);
-    z-index: 10;
+/* main的css樣式 */
+img#mailme {
+    width: 40px;
 }
 
 
-footer p {
-    color: var(--white-color);
-    background-color: #85858586;
-    padding: 0.2em;
-    text-align: center;
-    vertical-align: bottom;
+div.work {
+    display: flex;
+    wrap: wrap;
+    padding: 0;
+
+    >div {
+        width: calc(100%/3);
+        display: block;
+    }
+
+    img {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
 }
 
-/* 呼應nav圓角 */
-.displayArea {
-    /* border: 0.2em solid var(--white-color); */
-    /* border-radius: 0.5em; */
-    padding-top: 0.5em;
-}
-
-/* about me 文字區 */
-.aboutText h3 {
-    padding-left: 0.25em;
-    padding-top: 0.25em;
-}
-
-.aboutText p:not(:first-child, :nth-child(2)) {
-    padding-left: 1em;
-}
-
-.aboutText p:first-child,
-.aboutText p:nth-child(2) {
-    font-size: var(--h3-size);
+.work h4+p,
+.eduAndOthers p {
+    padding-left: 1rem;
 }
