@@ -26,15 +26,31 @@
 /* 共用區塊css樣式 */
 body {
     background: var(--hiheavy-color);
+    position: relative;
 
     header {
         padding: 1rem;
+        background: var(--hiheavy-color);
+
+        div {
+            background: var(--hiheavy-color);
+
+            div {
+                background: var(--heavy-color);
+
+            }
+        }
+
+
     }
 
     nav {
+        position: sticky;
+        top: 4.5rem;
         background: var(--heavy-color);
         color: var(--white-color);
         padding: 0.2rem 1.2rem;
+        /* hover相關顏色設定往下找 */
     }
 
     div {
@@ -45,10 +61,19 @@ body {
         h3 {
             padding: 0.75rem 0.75rem 0 0.75rem;
         }
+
+        h2 {
+            padding-top: 1.25rem;
+        }
+
+        .eduAndOthers {
+            padding-bottom: 1.25rem;
+        }
     }
 
     footer {
-        background: var(--black-color);
+        background: var(--hiheavy-color);
+        color: var(--white-color);
         padding: 0.2rem;
         text-align: center;
     }
@@ -69,8 +94,22 @@ body {
 
 }
 
+/* >> header&nav << */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    wrap: wrap;
+    justify-content: space-between;
+
+    div {
+        display: none;
+    }
+}
+
 nav {
-    position: relative;
+    top: 30rem;
     width: 100%;
     height: 30%vw;
 }
@@ -81,14 +120,15 @@ nav ul {
     display: flex;
     wrap: wrap;
     justify-content: flex-end;
-
+    font-size: var(--h3-size);
+    gap: 0.5rem;
 
     li {
         list-style-type: none;
         height: 40%vh;
-        font-size: var(--h3-size);
         font-weight: bold;
         padding: 0 1.5rem;
+
     }
 
     a {
@@ -101,7 +141,19 @@ nav ul {
     }
 }
 
-/* main的css樣式 */
+nav ul {
+    justify-content: flex-start;
+}
+
+
+li {
+    flex-direction: column;
+    font-size: var(--h2-size);
+
+}
+
+
+/* >> main << */
 img#mailme {
     width: 40px;
 }
@@ -127,4 +179,70 @@ div.work {
 .work h4+p,
 .eduAndOthers p {
     padding-left: 1rem;
+}
+
+/* >> mobile << */
+@media (min-width:300px) and (max-width:700px) {
+    header {
+        /* h1被nav壓，往上挪 */
+        top: -1rem;
+
+
+        /* 大標 */
+        h1 {
+            font-size: 3rem;
+        }
+
+        span {
+            display: none;
+        }
+
+        /* navbtn */
+        div {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            width: 32px;
+            padding: 2px;
+            margin: 10px;
+
+            div {
+                width: 200%;
+                margin: 2px;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+
+    div.work {
+        display: block;
+        padding-bottom: 1.25rem;
+
+        >div {
+            width: 100%;
+        }
+
+        img {
+            width: 40%
+        }
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .active .navHambergerTwo {
+        display: none;
+    }
+
+    .active .navHambergerOne {
+        transform: translateX(-0.5rem) translateY(90%) rotate(45deg);
+    }
+
+    .active .navHambergerThree {
+        transform: translateX(-0.5rem) translateY(-50%) rotate(135deg);
+        /* 左上為原點，正數是順時針，負數是逆時針 */
+    }
 }
