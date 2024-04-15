@@ -4,7 +4,7 @@
     margin: 0;
     padding-inline-start: 0;
     /* 觀察用 */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* 通用變數 */
@@ -159,6 +159,17 @@ img#mailme {
     width: 40px;
 }
 
+div.contact {
+    display: flex;
+    wrap: wrap;
+    padding-top: 0.125rem;
+    gap: 0.2rem;
+
+    p {
+        display: flex;
+        align-items: center;
+    }
+}
 
 div.work {
     display: flex;
@@ -183,15 +194,15 @@ div.work {
 }
 
 /* >> mobile << */
-@media (min-width:300px) and (max-width:700px) {
+@media (max-width:700px) {
     header {
         /* h1被nav壓，往上挪 */
-        top: -1rem;
-
+        top: -0.5rem;
+        /* min-width: 360px; */
 
         /* 大標 */
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
         }
 
         span {
@@ -206,13 +217,25 @@ div.work {
             width: 32px;
             padding: 2px;
             margin: 10px;
+            min-width: 32px;
+            flex-shrink: 0;
+            margin-left: -2px;
+            transform: scale(0.9);
+            top: -1rem;
+
 
             div {
-                width: 200%;
+                width: 150%;
                 margin: 2px;
                 border-radius: 0.5rem;
+
+
             }
         }
+    }
+
+    body {
+        /* min-width: 360px; */
     }
 
 
@@ -243,6 +266,7 @@ div.work {
         height: 5rem;
         display: flex;
         flex-direction: column;
+        background: var(--heavy-color);
     }
 
     .active .navHambergerTwo {
@@ -256,5 +280,29 @@ div.work {
     .active .navHambergerThree {
         transform: translateX(-0.5rem) translateY(-50%) rotate(135deg);
         /* 左上為原點，正數是順時針，負數是逆時針 */
+    }
+
+    /* nav區，scroll時多一條橫槓，加顏色覆蓋 */
+    #navm1 {
+        background: var(--hiheavy-color);
+    }
+
+    #navm1.active {
+        background: var(--heavy-color);
+    }
+
+    @media (min-width:300px) and(max-width:400px) {
+
+        header {
+            min-width: 260px;
+        }
+
+        body {
+            min-width: 260px;
+        }
+
+        header div div {
+            margin-left: -20px;
+        }
     }
 }
