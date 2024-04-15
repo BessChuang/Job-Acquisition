@@ -28,6 +28,7 @@ body {
     background: var(--hiheavy-color);
     position: relative;
 
+
     header {
         padding: 1rem;
         background: var(--hiheavy-color);
@@ -228,7 +229,18 @@ div.work {
         }
     }
 
-    nav ul.active {
+
+    #navm2 li {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #navm2 li.active {
+        max-height: calc(100%/2);
+    }
+
+    #navm2.active {
+        height: 5rem;
         display: flex;
         flex-direction: column;
     }
