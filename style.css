@@ -100,6 +100,8 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     wrap: wrap;
     justify-content: space-between;
@@ -118,6 +120,8 @@ nav {
 nav ul {
     margin-left: 0;
     padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     wrap: wrap;
     justify-content: flex-end;
@@ -148,6 +152,9 @@ nav ul {
 
 
 li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-direction: column;
     flex-direction: column;
     font-size: var(--h2-size);
 
@@ -160,18 +167,24 @@ img#mailme {
 }
 
 div.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     wrap: wrap;
     padding-top: 0.125rem;
     gap: 0.2rem;
 
     p {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         align-items: center;
     }
 }
 
 div.work {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     wrap: wrap;
     padding: 0;
@@ -211,13 +224,19 @@ div.work {
 
         /* navbtn */
         div {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-direction: column;
             flex-direction: column;
             cursor: pointer;
             width: 32px;
             padding: 2px;
             margin: 10px;
             min-width: 32px;
+            -ms-flex-negative: 0;
             flex-shrink: 0;
             margin-left: -2px;
             transform: scale(0.9);
@@ -264,6 +283,11 @@ div.work {
 
     #navm2.active {
         height: 5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-direction: column;
         display: flex;
         flex-direction: column;
         background: var(--heavy-color);
