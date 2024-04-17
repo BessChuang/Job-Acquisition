@@ -104,6 +104,8 @@ header {
     display: -ms-flexbox;
     display: flex;
     wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     div {
@@ -124,6 +126,8 @@ nav ul {
     display: -ms-flexbox;
     display: flex;
     wrap: wrap;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     font-size: var(--h3-size);
     gap: 0.5rem;
@@ -147,6 +151,8 @@ nav ul {
 }
 
 nav ul {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 }
 
@@ -178,6 +184,8 @@ div.contact {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         align-items: center;
     }
 }
