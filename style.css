@@ -40,12 +40,6 @@ body {
     position: relative;
 }
 
-
-header {
-    padding: 1rem 1rem 0.5rem 1rem;
-    background: var(--hiheavy-color, , #416390);
-}
-
 .navHamberger {
     background: var(--hiheavy-color, #416390);
     padding: 1rem;
@@ -57,20 +51,10 @@ header {
     background: var(--heavy-color, #7da9f8);
 }
 
-nav {
-    position: sticky;
-    top: 4rem;
-    background: var(--heavy-color, #7da9f8);
-    color: var(--white-color, #fffefe);
-    padding: 0.2rem 1.2rem;
-    margin: 0 1rem;
-    /* hover相關顏色設定往下找 */
-}
-
 #main {
     background: var(--white-color, #fffefe);
     width: min(98vw, 1440px);
-    margin: 0 1rem;
+    margin: 0 auto;
 }
 
 #main div,
@@ -97,6 +81,7 @@ footer {
 h1 {
     font-size: (--h1-size);
     color: var(--white-color, #fffefe);
+    margin: 0 auto;
 }
 
 h2 {
@@ -109,7 +94,8 @@ h3 {
 
 /* >> header&nav << */
 header {
-    width: 100%;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background: var(--hiheavy-color, , #416390);
     position: sticky;
     top: 0;
     left: 0;
@@ -120,14 +106,24 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 header div {
     display: none;
+    margin: 0 auto;
+
 }
 
 nav {
-    width: 100%;
+    position: sticky;
+    top: 4rem;
+    background: var(--heavy-color, #7da9f8);
+    color: var(--white-color, #fffefe);
+    padding: 0.2rem 1.2rem;
+    margin: 0 1rem;
+    width: min(98%, 1440px);
+    margin: auto;
 }
 
 nav ul {
@@ -226,6 +222,7 @@ div.work img {
     /* 大標 */
     header h1 {
         font-size: 2.8rem;
+        top: 0.5rem;
     }
 
     header span {
@@ -333,6 +330,10 @@ div.work img {
         min-width: 260px;
     }
 
+    header {
+        top: 0.5rem;
+    }
+
     body {
         min-width: 260px;
     }
@@ -341,6 +342,7 @@ div.work img {
         margin-left: -20px;
     }
 }
+
 
 /* //iPad portrait */
 /* //iPad landscape */
