@@ -1,5 +1,6 @@
 /* default重新設定 */
-* {
+*,
+html {
     box-sizing: border-box;
     margin: 0;
     padding-inline-start: 0;
@@ -9,21 +10,29 @@
 
 /* 通用變數 */
 :root {
+    /* 字體大小 */
     --h1-size: 2em;
     --h2-size: 1.5em;
     --h3-size: 1.125em;
-}
-
-:root {
+    /* 顏色 */
     --black-color: #85858586;
     --white-color: #fffefe;
     --hiheavy-color: #416390;
     --heavy-color: #7da9f8;
     --light-color: #ffb276;
     --hilight-color: #ff7320;
+    /* 寬高 */
+    --realvh: 100vh;
+    --realvw: 100vw;
 }
 
+
 /* 共用區塊css樣式 */
+html {
+    width: 100vw;
+    margin: auto;
+}
+
 body {
     background: var(--hiheavy-color);
     position: relative;
@@ -324,7 +333,6 @@ div.work {
     }
 
     @media (min-width:300px) and(max-width:400px) {
-
         header {
             min-width: 260px;
         }
@@ -338,3 +346,17 @@ div.work {
         }
     }
 }
+
+/* //iPad portrait */
+@media (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    viewport-height: 1024px;
+}
+
+/* //iPad landscape */
+@media (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+    width: 768px;
+}
+
+/* ref:
+(1)https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
+(2)https://gist.github.com/jopfre/b8ea1a7ebf39cd8efabb */
