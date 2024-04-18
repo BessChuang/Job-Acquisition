@@ -227,7 +227,7 @@ div.work {
 }
 
 /* >> mobile << */
-@media (max-width:870px) {
+@media only screen and (max-width:870px) {
     header {
         /* h1被nav壓，往上挪 */
         top: -0.5rem;
@@ -335,7 +335,7 @@ div.work {
         background: var(--heavy-color, #7da9f8);
     }
 
-    @media (min-width:300px) and(max-width:400px) {
+    @media only screen and (min-width:300px) and(max-width:400px) {
         header {
             min-width: 260px;
         }
