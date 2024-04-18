@@ -1,13 +1,13 @@
 var realvh = window.innerHeight;
 var realvw = window.innerWidth;
-if (realvw < 1024px && (realvw / realvh < 1)) { realvw = realvh; }
+if (realvw < 1024 && (realvw / realvh < 1.0)) { realvw = realvh };
 
 const navbtn = document.getElementById("navbtn"),
     navbtnbar = document.querySelector("header div div"),
     navm1 = document.getElementById("navm1"),
     navm2 = document.getElementById("navm2"),//m implies Mobile
     navMain = document.getElementById("navMain"),
-    navExhibit = document.getElementById("navExhibit")
+    navExhibit = document.getElementById("navExhibit");
 
 navbtn.addEventListener("click", function () {
     // if (navbtn.classList.contains("active")) {
