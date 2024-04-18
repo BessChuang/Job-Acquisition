@@ -41,51 +41,51 @@ body {
 }
 
 
-body header {
+header {
     padding: 1rem;
     background: var(--hiheavy-color, , #416390);
-
-
-
 }
 
-body header div {
+.navHamberger {
     background: var(--hiheavy-color, #416390);
 }
 
-body header div div {
+.navHambergerOne,
+.navHambergerTwo,
+.navHambergerThree {
     background: var(--heavy-color, #7da9f8);
 }
 
-body nav {
+nav {
     position: sticky;
     top: 4.5rem;
     background: var(--heavy-color, #7da9f8);
     color: var(--white-color, #fffefe);
     padding: 0.2rem 1.2rem;
+    margin: 1rem;
     /* hover相關顏色設定往下找 */
 }
 
-body nav div {
+#main {
     background: var(--white-color, #fffefe);
-
-
+    width: min(98vw, 1440px);
+    margin: 0 1rem;
 }
 
-body nav div div,
-body nav div h3 {
+#main div,
+#main h3 {
     padding: 0.75rem 0.75rem 0 0.75rem;
 }
 
-body nav div h2 {
+#main h2 {
     padding: 1.25rem 0.75rem 0 0.75rem;
 }
 
-body nav div .eduAndOthers {
+#main .eduAndOthers {
     padding-bottom: 1.25rem;
 }
 
-body footer {
+footer {
     background: var(--hiheavy-color, #416390);
     color: var(--white-color, #fffefe);
     padding: 0.2rem;
@@ -125,7 +125,6 @@ header div {
 }
 
 nav {
-    top: 30rem;
     width: 100%;
 }
 
@@ -143,18 +142,11 @@ nav ul {
     gap: 0.5rem;
 }
 
-/* nav ul {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-} */
-
 nav ul li {
     list-style-type: none;
     height: 40%vh;
     font-weight: bold;
     padding: 0 1.5rem;
-
 }
 
 nav ul a {
@@ -165,7 +157,6 @@ nav ul a {
 nav ul li:hover {
     background: var(--light-color, #ffb276);
 }
-
 
 li {
     -webkit-box-orient: vertical;
@@ -228,7 +219,7 @@ div.work img {
 }
 
 /* >> mobile << */
-@media screen and (max-width:870px) {
+@media only screen and (max-width:870px) {
     header {
         /* h1被nav壓，往上挪 */
         top: -0.5rem;
@@ -334,7 +325,7 @@ div.work img {
 
 }
 
-@media screen and (min-width:300px) and(max-width:400px) {
+@media only screen and (min-width:300px) and(max-width:400px) {
     header {
         min-width: 260px;
     }
