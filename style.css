@@ -251,6 +251,10 @@ div.work img {
         left: 1rem;
     }
 
+    nav {
+        top: 6rem;
+    }
+
     .navHamberger div {
         width: 200%;
         margin: 4px;
