@@ -39,73 +39,71 @@ html {
 body {
     background: var(--hiheavy-color, #416390);
     position: relative;
+}
 
 
-
-    header {
-        padding: 1rem;
-        background: var(--hiheavy-color, , #416390);
-
-        div {
-            background: var(--hiheavy-color, #416390);
-
-            div {
-                background: var(--heavy-color, #7da9f8);
-
-            }
-        }
-
-
-    }
-
-    nav {
-        position: sticky;
-        top: 4.5rem;
-        background: var(--heavy-color, #7da9f8);
-        color: var(--white-color, #fffefe);
-        padding: 0.2rem 1.2rem;
-        /* hover相關顏色設定往下找 */
-    }
+body header {
+    padding: 1rem;
+    background: var(--hiheavy-color, , #416390);
 
     div {
-        background: var(--white-color, #fffefe);
-
-        div,
-        h2,
-        h3 {
-            padding: 0.75rem 0.75rem 0 0.75rem;
-        }
-
-        h2 {
-            padding-top: 1.25rem;
-        }
-
-        .eduAndOthers {
-            padding-bottom: 1.25rem;
-        }
-    }
-
-    footer {
         background: var(--hiheavy-color, #416390);
-        color: var(--white-color, #fffefe);
-        padding: 0.2rem;
-        text-align: center;
+
+        div {
+            background: var(--heavy-color, #7da9f8);
+
+        }
     }
 
-    h1 {
-        font-size: (--h1-size);
-        color: var(--white-color, #fffefe);
+
+}
+
+body nav {
+    position: sticky;
+    top: 4.5rem;
+    background: var(--heavy-color, #7da9f8);
+    color: var(--white-color, #fffefe);
+    padding: 0.2rem 1.2rem;
+    /* hover相關顏色設定往下找 */
+}
+
+body nav div {
+    background: var(--white-color, #fffefe);
+
+    div,
+    h2,
+    h3 {
+        padding: 0.75rem 0.75rem 0 0.75rem;
     }
 
     h2 {
-        font-size: (--h1-size);
+        padding-top: 1.25rem;
     }
 
-    h3 {
-        font-size: (--h1-size);
+    .eduAndOthers {
+        padding-bottom: 1.25rem;
     }
+}
+
+body footer {
+    background: var(--hiheavy-color, #416390);
+    color: var(--white-color, #fffefe);
+    padding: 0.2rem;
+    text-align: center;
+}
 
 
+h1 {
+    font-size: (--h1-size);
+    color: var(--white-color, #fffefe);
+}
+
+h2 {
+    font-size: (--h1-size);
+}
+
+h3 {
+    font-size: (--h1-size);
 }
 
 /* >> header&nav << */
