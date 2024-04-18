@@ -1,6 +1,9 @@
 var realvh = window.innerHeight;
 var realvw = window.innerWidth;
-if (realvw < 1024 && (realvw / realvh < 1.0)) { realvw = realvh };
+if (realvw < 1024 || realvh < 1024) {
+    realvw = window.innerHeight;
+    //  realvw = window.innerWidth };
+}
 
 const navbtn = document.getElementById("navbtn"),
     navbtnbar = document.querySelector("header div div"),

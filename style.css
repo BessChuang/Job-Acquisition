@@ -4,6 +4,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding-inline-start: 0;
+    -webkit-text-size-adjust: 100%;
     /* 觀察用 */
     /* border: 1px solid red; */
 }
@@ -31,27 +32,25 @@ html {
 /* 共用區塊css樣式 */
 html {
     width: 100vw;
+    height: 100vh;
     margin: auto;
 }
 
 body {
-    background: var(--hiheavy-color);
+    background: var(--hiheavy-color, #416390);
     position: relative;
+
 
 
     header {
         padding: 1rem;
-        background: var(--hiheavy-color);
-        background: #416390;
-        ;
+        background: var(--hiheavy-color, , #416390);
 
         div {
-            background: var(--hiheavy-color);
-            background: #416390;
-            ;
+            background: var(--hiheavy-color, #416390);
 
             div {
-                background: var(--heavy-color);
+                background: var(--heavy-color, #7da9f8);
 
             }
         }
@@ -62,18 +61,14 @@ body {
     nav {
         position: sticky;
         top: 4.5rem;
-        background: var(--heavy-color);
-        background: #7da9f8;
-        color: var(--white-color);
-        color: #fffefe;
+        background: var(--heavy-color, #7da9f8);
+        color: var(--white-color, #fffefe);
         padding: 0.2rem 1.2rem;
         /* hover相關顏色設定往下找 */
     }
 
     div {
-        background: var(--white-color);
-        background: #fffefe;
-        ;
+        background: var(--white-color, #fffefe);
 
         div,
         h2,
@@ -91,18 +86,15 @@ body {
     }
 
     footer {
-        background: var(--hiheavy-color);
-        background: #416390;
-        color: var(--white-color);
-        color: #fffefe;
+        background: var(--hiheavy-color, #416390);
+        color: var(--white-color, #fffefe);
         padding: 0.2rem;
         text-align: center;
     }
 
     h1 {
         font-size: (--h1-size);
-        color: var(--white-color);
-        color: #fffefe;
+        color: var(--white-color, #fffefe);
     }
 
     h2 {
@@ -162,12 +154,11 @@ nav ul {
 
     a {
         text-decoration: underline;
-        color: var(--hiheavy-color);
-        color: #416390;
+        color: var(--hiheavy-color, #416390);
     }
 
     li:hover {
-        background: var(--light-color);
+        background: var(--light-color, #ffb276);
     }
 }
 
@@ -319,8 +310,7 @@ div.work {
         -ms-direction: column;
         display: flex;
         flex-direction: column;
-        background: var(--heavy-color);
-        background: #7da9f8;
+        background: var(--heavy-color, #7da9f8);
     }
 
     .active .navHambergerTwo {
@@ -338,13 +328,11 @@ div.work {
 
     /* nav區，scroll時多一條橫槓，加顏色覆蓋 */
     #navm1 {
-        background: var(--hiheavy-color);
-        background: #416390;
+        background: var(--hiheavy-color, #416390);
     }
 
     #navm1.active {
-        background: var(--heavy-color);
-        background: #7da9f8
+        background: var(--heavy-color, #7da9f8);
     }
 
     @media (min-width:300px) and(max-width:400px) {
@@ -363,15 +351,11 @@ div.work {
 }
 
 /* //iPad portrait */
-@media (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+/* //iPad landscape */
+/* @media (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
     viewport-height: 1024px;
 }
 
-/* //iPad landscape */
 @media (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
     width: 768px;
-}
-
-/* ref:
-(1)https://gist.github.com/pburtchaell/e702f441ba9b3f76f587
-(2)https://gist.github.com/jopfre/b8ea1a7ebf39cd8efabb */
+} */
